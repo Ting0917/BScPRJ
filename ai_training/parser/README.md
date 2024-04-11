@@ -4,8 +4,8 @@ This folder contains source code of data processing; typically refer to the Data
 
 Source code in this folder serves the following objectives:
 
-0. Contains dataset
-   0.1 dataset are all saved under ai_training/parser/data, folder structure is:
+Contains dataset
+   dataset are all saved under ai_training/parser/data, folder structure is:
    /data/train_data/pascal
    /data/train_data/java
    /data/train_data/pascal_ast_str
@@ -25,10 +25,12 @@ Source code in this folder serves the following objectives:
    /data/source_pascal_target_java_train.json
    /data/source_pascal_target_java_validation.json
 
+.
 
-   Build .json file in the desired format as Tree2Tree input, for training data, validation data, and atom test data.
-   build_json_from_parse_tree: build .json file as input of the Tree2Tree model.
+## To build Json files from Parse Tree
 
+Build .json file in the desired format as Tree2Tree input, for training data, validation data, and atom test data.
+build_json_from_parse_tree: build .json file as input of the Tree2Tree model
 ```bash
 python build_json_from_parse_tree.py --folder test_data --result_file_name source_pascal_target_java_test
 ```

@@ -77,24 +77,6 @@ python3 translate.py
 --val_data ../../parser/data/source_pascal_target_java_validation.json
 ```
 
-## Test the Model
-
-```bash
-```
-
-### Run with best eval loss model:
-
-```bash
-
-```
-
-### Run with best loss score model:
-
-```bash
-
-```
-
-# Experiment this Model on other dataset
 
 ### train
 For Windows:
@@ -130,7 +112,7 @@ python translate.py --network tree2tree --test --load_model ../model_ckpts/tree2
 
 
 The environment of this project is managed by python virtual machine with pip.
-Required Python packages and version info are written in the 'requirement.txt' file.To build the same environment as me, do the following:
+Required Python packages and version info are written in the 'requirement.txt' file.To build the  environment:
 
 ```bash
 cd tree2tree
