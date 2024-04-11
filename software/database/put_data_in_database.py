@@ -1,3 +1,10 @@
+"""
+Author: Ting-Chen Chen
+The primary function of this script is to automate the extraction of textual data from files organized within a specific directory structure, 
+format this data into a JSON representation, and send it to a web server or API endpoint for further use, 
+such as populating a database for a machine learning project or another form of data analysis.
+
+"""
 import requests
 import os
 from glob import glob
