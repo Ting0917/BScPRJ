@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: selina0917/ptoj_trans_database
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - my_network
+
+  ast_backend:
+    image: selina0917/ptoj_trans_ast_backend
+    depends_on:
+      - mongodb
+    environment:
+      SPRING_DATA_MONGODB_URI: mongodb://mongodb:27017/UKPersonalProject
+    ports:
+      - "8080:8080"
+    networks:
+      - my_network
+
+  ml_backend:
+    image: selina0917/ptoj_trans_ml_backend
+    ports:
+      - "5000:5000"
+    networks:
+      - my_network
+      
+  uk-frontend:
+    image: selina0917/ptoj_trans_frontend # Ensure this matches your frontend image name
+    ports:
+      - "3000:80" # Map port 80 from the container to port 3000 on the host
+    networks:
+      - my_network
+    depends_on:
+      - ast_backend
+
+networks:
+  my_network:
+
+volumes:
+  mongodb_data:
