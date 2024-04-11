@@ -52,29 +52,9 @@ In the following we list some important arguments in `translate.py`:
 
 ## Train the model
 
-```bash
-python translate.py --network tree2tree --train_dir ../model_ckpts/tree2tree/ --input_format tree --output_format tree
-```
-
-#python3
 
 ```bash
-python3 translate.py 
---network tree2tree 
---train_dir ../model_ckpts/tree2tree/ 
---input_format tree 
---output_format tree
-```
-
-```bash
-python3 translate.py 
---network tree2tree 
---train_dir ../model_ckpts/tree2tree/ 
---input_format tree --output_format tree 
---num_epochs 100 --batch_size 5 
---steps_per_checkpoint 5 
---train_data ../../parser/data/source_pascal_target_java_train.json 
---val_data ../../parser/data/source_pascal_target_java_validation.json
+python3 translate.py --network tree2tree --train_dir ../model_ckpts/tree2tree/ --input_format tree --output_format tree --num_epochs 100 --batch_size 5 --steps_per_checkpoint 5 --train_data ../../parser/data/source_pascal_target_java_train.json --val_data ../../parser/data/source_pascal_target_java_validation.json
 ```
 
 
@@ -82,15 +62,7 @@ python3 translate.py
 For Windows:
 
 ```bash
-python translate.py 
---network tree2tree 
---train_dir ..\model_ckpts\tree2tree\ --input_format tree 
---output_format tree 
---num_epochs 100 
---batch_size 5 
---steps_per_checkpoint 5 
---train_data ..\..\parser\data\source_pascal_target_java_train.json 
---val_data ..\..\parser\data\source_pascal_target_java_validation.json
+python translate.py --network tree2tree --train_dir ..\model_ckpts\tree2tree\ --input_format tree --output_format tree --num_epochs 100 --batch_size 5 --steps_per_checkpoint 5 --train_data ..\..\parser\data\source_pascal_target_java_train.json --val_data ..\..\parser\data\source_pascal_target_java_validation.json
 
 ```
 For Linux:
@@ -103,7 +75,7 @@ python translate.py --network tree2tree --train_dir ../model_ckpts/tree2tree/ --
 For Linux and Windows
 
 ```bash Best Loss
-python translate.py --network tree2tree --test --load_model ../model_ckpts/tree2tree/best_loss_translate_195.ckpt --train_data ../../parser/data/source_pascal_target_java_train.json --test_data ../../parser/data/source_pascal_target_java_test.json --input_format tree --output_format tree
+python translate.py --network tree2tree --test --load_model ../model_ckpts/tree2tree/best_loss_translate_20.ckpt --train_data ../../parser/data/source_pascal_target_java_train.json --test_data ../../parser/data/source_pascal_target_java_test.json --input_format tree --output_format tree
 ```
 
 ```bash Best Eval Loss
