@@ -1,6 +1,6 @@
 # BSc Final Year Project: ML in Software Engineering- Legacy Programming Language Translation using ML approach
 
-- GitHub Repository link: 
+- GitHub Repository link: https://github.com/Ting0917/BScPRJ/tree/main
 
 - Final Project Report is available to view [online]()
 
